@@ -1,0 +1,297 @@
+:root {
+  --dark-blue: #2f276f;
+  --light-red: #ff033d;
+  --dark-beige: #fef5ed;
+  --darker-beige: #ffecdf;
+  --border-radius: 10px;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+li {
+  list-style-type: none;
+}
+
+/* Utilities */
+
+.container {
+  width: 80%;
+  max-width: 114rem;
+  margin: 0 auto;
+}
+
+/* Header */
+
+.main-header {
+  background-color: var(--dark-beige);
+}
+
+.logo {
+  color: var(--light-red);
+  font-weight: bold;
+  font-size: 3.5rem;
+  margin-bottom: 3rem;
+  padding-top: 2rem;
+}
+
+.main-nav-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding-bottom: 2rem;
+}
+
+.nav-link {
+  border-radius: var(--border-radius);
+  padding: 1rem 5rem;
+  font-weight: bold;
+  font-size: 1.8rem;
+  transition: all 0.3s;
+  word-wrap: break-word;
+}
+
+.nav-link:link,
+.nav-link:visited {
+  border: 2px solid var(--light-red);
+  color: var(--dark-blue);
+}
+
+.nav-link:hover,
+.nav-link:active {
+  background-color: var(--light-red);
+  color: white;
+}
+
+/* Banner */
+
+.banner {
+  background-color: var(--dark-beige);
+  padding: 3rem 0;
+}
+
+.banner-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.banner__img-container {
+  position: relative;
+  flex: 65;
+}
+
+.banner__img {
+  display: block;
+  width: 100%;
+  border-radius: var(--border-radius);
+  height: 40rem;
+}
+
+.banner__img-label {
+  font-weight: bold;
+  font-size: 2.5rem;
+  color: white;
+  background-color: var(--light-red);
+  position: absolute;
+  left: 3rem;
+  bottom: 3rem;
+}
+
+.banner__prices-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  flex: 35;
+}
+
+.banner__price {
+  border-radius: var(--border-radius);
+  background-color: var(--light-red);
+  flex: 1;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner__price-number {
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.banner__price-label {
+  font-size: 2rem;
+}
+
+/* Featured Food */
+
+.featured-food {
+  padding: 3rem 0;
+  background-color: var(--darker-beige);
+}
+
+.featured-meals-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.featured-meals {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.featured-meal {
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  flex: 1;
+}
+
+.featured-meal__img {
+  display: block;
+  width: 100%;
+  height: 18rem;
+  object-fit: cover;
+}
+
+.featured-meal__text {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.featured-meal__name {
+  color: var(--dark-blue);
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+.featured-meal__price {
+  color: var(--light-red);
+  font-size: 1.6rem;
+}
+
+.featured-meal--main {
+  display: flex;
+  padding: 3rem;
+  gap: 1.5rem;
+}
+
+.featured-meal__img {
+  flex: 25;
+  display: block;
+}
+
+.featured-meal--main__text {
+  flex: 75;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.6rem;
+}
+
+.featured-meal--main__img {
+  flex: 25;
+  width: 30%;
+}
+
+.featured-meal--main__title {
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+
+.featured-meal--main__description {
+  font-size: 1.6rem;
+}
+
+.featured-meal--main__cta {
+  background-color: var(--light-red);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: var(--border-radius);
+  font-size: 1.6rem;
+}
+
+.featured-meal--main__cta:hover,
+.featured-meal--main__cta:active {
+  background-color: crimson;
+}
+
+/* Our Specialities  */
+
+.specialties {
+  background-color: var(--dark-beige);
+  padding: 3rem 0;
+}
+
+.specialties__title-line {
+  height: 4px;
+  background-color: var(--light-red);
+  margin: 0 auto;
+  width: 95%;
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.specialties__title-text {
+  position: absolute;
+  color: var(--dark-blue);
+  font-weight: bold;
+  font-size: 2rem;
+  background-color: var(--dark-beige);
+  padding: 0 1rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.specialties__meals {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.specialties__meal {
+  width: 13%;
+  border-radius: var(--border-radius);
+}
+
+/* Footer  */
+
+.main-footer {
+  padding: 3rem 0;
+  background-color: var(--darker-beige);
+  text-align: center;
+}
+
+.main-footer-copy {
+  font-size: 1.6rem;
+  color: var(--dark-blue);
+  font-weight: bold;
+}
